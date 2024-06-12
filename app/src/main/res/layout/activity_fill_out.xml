@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FillOut">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Surveys"
+            android:textStyle="bold" />
+        <!-- Personal Details Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Details:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/full_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Names" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/contact_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Number"
+            android:inputType="phone" />
+
+        <!-- Favorite Food Section -->
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What is your favorite food?" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/pizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pizza" />
+
+            <CheckBox
+                android:id="@+id/pasta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pasta" />
+
+            <CheckBox
+                android:id="@+id/pap_and_wors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pap and Wors" />
+
+            <CheckBox
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other" />
+        </LinearLayout>
+
+        <!-- Rating Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Please rate your level of agreement on a scale from 1 to 5, with 1 being 'strongly agree' and 5 being 'strongly disagree'." />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1,2,3,4,5">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Strongly Agree" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agree" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Neutral" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disagree" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Strongly Disagree" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I like to watch movies" />
+
+                <RadioGroup
+                    android:id="@+id/rating_movies"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating_movies_1" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating_movies_2" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating_movies_3" />
+                    <RadioButton android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating_movies_4" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating_movies_5" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I like to listen to radio" />
+
+                <RadioGroup
+                    android:id="@+id/rating_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_radio_1" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_radio_2" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_radio_3" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_radio_4" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_radio_5" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I like to eat out" />
+
+                <RadioGroup
+                    android:id="@+id/rating_eat_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_eat_out_1" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_eat_out_2" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_eat_out_3" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_eat_out_4" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_eat_out_5" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I like to watch TV" />
+
+                <RadioGroup
+                    android:id="@+id/rating_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_tv_1" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_tv_2" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_tv_3" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_tv_4" />
+                    <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rating_tv_5" />
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+        <Button
+            android:id="@+id/view_results_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Survey Results"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
